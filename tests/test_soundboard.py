@@ -3,7 +3,7 @@ import soundboard
 from os import path
 from unittest.mock import patch
 
-fixture = path.join(path.dirname(__file__), "fixture/", "sounds/")
+fixture = path.join(path.dirname(__file__), "fixture/")
 
 
 def do_nothing(*args):
