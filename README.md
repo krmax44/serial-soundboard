@@ -1,6 +1,9 @@
 # Serial Soundboard
 
-Simple soundboard designed to be controlled by a serial interface.
+![CI status](https://github.com/krmax44/serial-soundboard/workflows/python/badge.svg)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Simple soundboard designed to be controlled by a serial interface. It also offers a minimal UI.
 
 ## Usage
 
@@ -11,16 +14,13 @@ python3 -m venv .venv
 pip install -r requirements.txt
 ```
 
-Create a folder `sounds` and put your sound files into it. At the moment, only `.mp3` files are supported. Start the program:
+Create a folder `sounds` and put your sound files into it. Start the program:
 
 ```bash
-python3 soundboard.py <PORT> [--rate <RATE>]
+python3 soundboard.py [--port <PORT> --rate <RATE>]
 ```
 
-Here, `<PORT>` is your serial port (like `/dev/ttyS0` or `COM1`). Optionally, you can specify a baud rate using the `--rate` flag. To trigger a sound, send its filename (without the extension) via serial, with a newline afterwards.
+Here, `<PORT>` is your serial port (like `/dev/ttyS0` or `COM1`). If you don't specify a port, the UI will open. Optionally, you can specify a baud rate using the `--rate` flag. All options can be listed via the `--help` flag.
 
-There is also a simple GUI available, that doesn't require a serial connection. To start it, open:
+To trigger a sound, send its filename (with or without the extension) via serial, with a newline afterwards.
 
-```bash
-python3 ui.py
-```
