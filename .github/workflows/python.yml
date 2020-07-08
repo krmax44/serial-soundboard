@@ -1,4 +1,4 @@
-name: Python application
+name: Serial Soundboard
 
 on:
   push:
