@@ -1,6 +1,7 @@
 # Serial Soundboard
 
-![Python application](https://github.com/krmax44/serial-soundboard/workflows/build/badge.svg)
+[![Python application](https://github.com/krmax44/serial-soundboard/workflows/build/badge.svg)](https://github.com/krmax44/serial-soundboard/actions?query=workflow%3Abuild)
+[![Code coverage](https://codecov.io/gh/krmax44/serial-soundboard/branch/master/graph/badge.svg)](https://codecov.io/gh/krmax44/serial-soundboard)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 Simple soundboard designed to be controlled by a serial interface. It also offers a minimal UI.

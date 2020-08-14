@@ -8,13 +8,13 @@ SOUNDEXTS = (".mp3", ".flac", ".wav", ".aac", ".m4a", ".wma")
 last_play = 0
 
 
+def check_file(file):
+    return path.isfile(path.join(SOUNDSPATH, file)) and file.endswith(SOUNDEXTS)
+
+
 def all_sounds():
     all_files = listdir(SOUNDSPATH)
-    sounds = filter(
-        lambda file: path.isfile(path.join(SOUNDSPATH, file))
-        and file.endswith(SOUNDEXTS),
-        all_files,
-    )
+    sounds = filter(check_file, all_files)
     return list(sounds)
 
 

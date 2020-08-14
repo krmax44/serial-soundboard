@@ -24,4 +24,7 @@ jobs:
         pip install -r requirements.txt
     - name: Test
       run: |
-        python -m unittest discover tests
+        python3 -m coverage run --omit ."venv/*" -m unittest discover tests
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
