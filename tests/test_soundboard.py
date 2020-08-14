@@ -14,7 +14,7 @@ class TestSoundboard(unittest.TestCase):
     @patch("soundboard.SOUNDSPATH", fixture)
     def test_file_discovery(self):
         sounds = soundboard.all_sounds()
-        self.assertListEqual(sounds, ["test.flac", "test.mp3"])
+        self.assertListEqual(sorted(sounds), ["test.flac", "test.mp3"])
 
     @patch("soundboard.SOUNDSPATH", fixture)
     @patch("soundboard.playsound")
